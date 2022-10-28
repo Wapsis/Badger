@@ -7,6 +7,13 @@ defmodule ApiWeb.Router do
 
   scope "/api", ApiWeb do
     pipe_through :api
+
+    # User endpoints
+    scope "/users" do
+      get "/test", UserController, :badge
+    end
+
+
   end
 
   # Enables LiveDashboard only for development
